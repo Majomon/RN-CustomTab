@@ -1,12 +1,12 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {HomeScreen} from '../screens/home/HomeScreen';
-import {ProductsScreen} from '../screens/products/ProductsScreen';
-import {Chatscreen} from '../screens/chat/ChatScreen';
-import {PostScreen} from '../screens/post/PostScreen';
-import {SettingsScreen} from '../screens/settings/SettingsScreen';
-import {StyleSheet, Text} from 'react-native';
-import {MyIcon} from '../components/MyIcon';
-import {View} from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { StyleSheet, Text, View } from 'react-native';
+import { MyIcon } from '../components/MyIcon';
+import { Chatscreen } from '../screens/chat/ChatScreen';
+import { HomeScreen } from '../screens/home/HomeScreen';
+import { PostScreen } from '../screens/post/PostScreen';
+import { ProductsScreen } from '../screens/products/ProductsScreen';
+import { SettingsScreen } from '../screens/settings/SettingsScreen';
+import { StackNavigator } from './StackNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +24,7 @@ export const TabNavigator = () => {
           let screenName: string = '';
 
           switch (route.name) {
-            case 'HomeScreen':
+            case 'StackNavigator':
               iconName = 'chatbox-ellipses-outline';
               screenName = 'Home';
               break;
@@ -68,7 +68,7 @@ export const TabNavigator = () => {
           );
         },
       })}>
-      <Tab.Screen name="HomeScreen" component={HomeScreen} options={{}} />
+      <Tab.Screen name="StackNavigator" component={StackNavigator} options={{}} />
       <Tab.Screen name="Chatscreen" component={Chatscreen} />
       <Tab.Screen name="PostScreen" component={PostScreen} />
       <Tab.Screen name="ProductsScreen" component={ProductsScreen} />
