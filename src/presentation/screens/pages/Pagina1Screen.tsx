@@ -1,7 +1,7 @@
 import { StackScreenProps } from '@react-navigation/stack';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { RootStackParams } from '../navigation/StackNavigator';
+import { RootStackParams } from '../../navigation/StackNavigator';
 
 interface Props extends StackScreenProps<RootStackParams> {}
 

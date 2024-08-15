@@ -1,12 +1,11 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { StyleSheet, Text, View } from 'react-native';
-import { MyIcon } from '../components/MyIcon';
-import { Chatscreen } from '../screens/chat/ChatScreen';
-import { HomeScreen } from '../screens/home/HomeScreen';
-import { PostScreen } from '../screens/post/PostScreen';
-import { ProductsScreen } from '../screens/products/ProductsScreen';
-import { SettingsScreen } from '../screens/settings/SettingsScreen';
-import { StackNavigator } from './StackNavigator';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {StyleSheet, Text, View} from 'react-native';
+import {MyIcon} from '../components/MyIcon';
+import {Chatscreen} from '../screens/chat/ChatScreen';
+import {PostScreen} from '../screens/post/PostScreen';
+import {ProductsScreen} from '../screens/products/ProductsScreen';
+import {SettingsScreen} from '../screens/settings/SettingsScreen';
+import {StackNavigator} from './StackNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,7 +17,6 @@ export const TabNavigator = () => {
         tabBarShowLabel: false,
         tabBarStyle: {...styles.tabBar, ...styles.shadow},
         headerShown: false,
-
         tabBarIcon: ({color, focused}) => {
           let iconName: string = '';
           let screenName: string = '';
@@ -60,7 +58,7 @@ export const TabNavigator = () => {
               <Text
                 style={{
                   color: focused ? '#e32f45' : '#748c94',
-                  fontSize: 12,
+                  // fontSize: 12,
                 }}>
                 {screenName}
               </Text>
@@ -68,7 +66,11 @@ export const TabNavigator = () => {
           );
         },
       })}>
-      <Tab.Screen name="StackNavigator" component={StackNavigator} options={{}} />
+      <Tab.Screen
+        name="StackNavigator"
+        component={StackNavigator}
+        options={{}}
+      />
       <Tab.Screen name="Chatscreen" component={Chatscreen} />
       <Tab.Screen name="PostScreen" component={PostScreen} />
       <Tab.Screen name="ProductsScreen" component={ProductsScreen} />
