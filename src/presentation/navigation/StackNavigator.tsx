@@ -1,8 +1,6 @@
-import {createStackNavigator} from '@react-navigation/stack';
-import {HomeScreen} from '../screens/home/HomeScreen';
-import {SettingsScreen} from '../screens/settings/SettingsScreen';
-import {Pagina1Screen} from '../screens/Pagina1Screen';
-import {Pagina2Screen} from '../screens/Pagina2Screen';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Pagina1Screen } from '../screens/Pagina1Screen';
+import { Pagina2Screen } from '../screens/Pagina2Screen';
 
 export type RootStackParams = {
   Pagina1Screen: undefined;
