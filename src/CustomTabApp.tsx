@@ -1,13 +1,18 @@
 import 'react-native-gesture-handler';
 
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import {TabNavigator} from './presentation/navigator/TabNavigator';
+import { PaperProvider } from 'react-native-paper';
+import { TabNavigator } from './presentation/navigator/TabNavigator';
 
 export const CustomTabApp = () => {
+
+  
   return (
-    <NavigationContainer>
-      <TabNavigator />
-    </NavigationContainer>
+    <PaperProvider>
+      <NavigationContainer>
+        <TabNavigator />
+      </NavigationContainer>
+    </PaperProvider>
   );
 };
