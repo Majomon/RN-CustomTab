@@ -4,6 +4,6 @@
 
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
-import { CustomTabApp } from './src/CustomTabApp';
+import { TabApp } from './src/TabApp';
 
-AppRegistry.registerComponent(appName, () => CustomTabApp);
+AppRegistry.registerComponent(appName, () => TabApp);

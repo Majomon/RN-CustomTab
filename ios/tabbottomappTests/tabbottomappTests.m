@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface customtabappTests : XCTestCase
+@interface tabbottomappTests : XCTestCase
 
 @end
 
-@implementation customtabappTests
+@implementation tabbottomappTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

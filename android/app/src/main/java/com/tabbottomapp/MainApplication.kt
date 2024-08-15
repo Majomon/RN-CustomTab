@@ -1,4 +1,4 @@
-package com.customtabapp
+package com.tabbottomapp
 
 import android.app.Application
 import com.facebook.react.PackageList
