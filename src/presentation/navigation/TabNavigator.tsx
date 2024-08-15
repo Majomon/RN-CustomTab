@@ -13,10 +13,12 @@ const Tab = createBottomTabNavigator();
 export const TabNavigator = () => {
   return (
     <Tab.Navigator
+      sceneContainerStyle={{backgroundColor: 'white'}}
       screenOptions={({route}) => ({
         tabBarShowLabel: false,
         tabBarStyle: {...styles.tabBar, ...styles.shadow},
         headerShown: false,
+
         tabBarIcon: ({color, focused}) => {
           let iconName: string = '';
           let screenName: string = '';
@@ -66,7 +68,7 @@ export const TabNavigator = () => {
           );
         },
       })}>
-      <Tab.Screen name="HomeScreen" component={HomeScreen} />
+      <Tab.Screen name="HomeScreen" component={HomeScreen} options={{}} />
       <Tab.Screen name="Chatscreen" component={Chatscreen} />
       <Tab.Screen name="PostScreen" component={PostScreen} />
       <Tab.Screen name="ProductsScreen" component={ProductsScreen} />
@@ -84,7 +86,7 @@ const styles = StyleSheet.create({
     elevation: 0,
     backgroundColor: 'white',
     borderRadius: 15,
-    height: 90,
+    height: 80,
   },
   shadow: {
     shadowColor: '#7F5DF0',
